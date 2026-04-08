@@ -10,7 +10,8 @@ def start():
     Welcomes user and gets their name.
 
     """
-
+    name = input("What is your name?: ").strip().title()
+    print(f"Welcome to the Affine Code Decipher Program, {name}!")
 
 
 # Print definition of the cipher
