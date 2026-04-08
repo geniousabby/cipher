@@ -10,6 +10,7 @@ def start():
     Welcomes user and gets their name.
 
     """
+
     name = input("What is your name?: ").strip().title()
     print(f"Welcome to the Affine Code Decipher Program, {name}!")
 
@@ -20,6 +21,15 @@ def define():
     Explains what the cipher does.
     
     """
+
+    print("\nTHE AFFINE CIPHER:")
+
+    print("\nThe Affine Cipher is a cipher that uses math to encode the message. " \
+    "It works by converting every letter in the alphabet " \
+    "into a number and performing a function on that number.")
+
+    print("For example, the letter 'a' is the " \
+    "number '1' since it's the first number in the alphabet.")
 
 
 # Ask user if they want to decrypt
@@ -53,13 +63,13 @@ def main():
     while True:
 
         # Print options
-        print("1- Define the cipher")
+        print("\n1- Define the cipher")
         print("2- Decrypt")
         print("3- Encrypt")
         print("4- Exit")
 
         # Ask user for their choice
-        choice = input("\nWhat would you like to do?")
+        choice = input("\nWhat would you like to do? ")
 
         if choice == "1":
             define()
