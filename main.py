@@ -1,3 +1,4 @@
+
 """
 Encript or decript using the affine cipher.
 
@@ -32,25 +33,23 @@ def define():
     "number '1' since it's the first number in the alphabet.")
 
 
-# Ask user if they want to decrypt
-def decrypt():
+# Decrypt message
+def message_de():
     """
-    Decrypts the message entered by the user
+    Decodes the message
     
     """
 
 
-# Ask user if they want to encrypt
-def encrypt():
+# Encrypt message
+def message_en():
     """
-    Encrypts the message entered by the user.
+    Codes the message
     
     """
 
 
-# Print message
-
-
+# Main
 def main():
     """
     Main function that calls the other functions.
@@ -75,17 +74,17 @@ def main():
             define()
 
         elif choice == "2":
-            decrypt()
+            message_de()
 
         elif choice == "3":
-            encrypt()
+            message_en()
 
         elif choice == "4":
             print("Thanks for playing!")
             break
 
-
-
+        else:
+            print("Invalid input.")
 
 
 if __name__ == "__main__":
