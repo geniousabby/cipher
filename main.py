@@ -12,6 +12,7 @@ def start():
 
     """
 
+    # Get name and print welcome user
     name = input("What is your name?: ").strip().title()
     print(f"Welcome to the Affine Code Decipher Program, {name}!")
 
@@ -30,7 +31,7 @@ def define():
     "into a number and performing a function on that number.")
 
     print("For example, the letter 'a' is the " \
-    "number '1' since it's the first number in the alphabet.")
+    "number '1' because it's the first number in the alphabet.")
 
 
 # Decrypt message
@@ -39,6 +40,46 @@ def message_de():
     Decodes the message
     
     """
+    # Get user input for message to decrypt
+    message = input("\nWhat message would you like to decrypt? ").lower().strip()
+
+    # reassign values of numbers
+
+    decrypt = {
+        '-1':'a',
+        '-2':'b',
+        '-3':'c',
+        '-4':'d',
+        '-5':'e',
+        '-6':'f',
+        '-7':'g',
+        '-8':'h',
+        '-9':'i',
+        '_10':'j',
+        '_11':'k',
+        '_12':'l',
+        '_13':'m',
+        '_14':'n',
+        '_15':'o',
+        '_16':'p',
+        '_17':'q',
+        '_18':'r',
+        '_19':'s',
+        '_20':'t',
+        '_21':'u',
+        '_22':'v',
+        '_23':'w',
+        '_24':'x',
+        '_25':'y',
+        '_26':'z',
+    }
+
+    # replace numbers with letters in dictionary
+    for key in decrypt:
+        message = message.replace(key, decrypt[key])
+    print(f"\nYour decrypted message is: {message}")
+
+
 
 
 # Encrypt message
@@ -47,7 +88,6 @@ def message_en():
     Codes the message
     
     """
-
 
 # Main
 def main():
