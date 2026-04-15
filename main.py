@@ -23,13 +23,15 @@ def define():
     Explains what the cipher does.
     
     """
-
+    # Name of cipher
     print("\nTHE AFFINE CIPHER:")
 
+    # Explanation of cipher
     print("\nThe Affine Cipher is a cipher that uses numbers to encode a message. " \
     "It works by converting every letter in the alphabet " \
     "into a number and swaps each letter in the message to its uniquenumber.")
 
+    # Example of cipher
     print("For example, the letter 'a' is the " \
     "number '1' because it's the first number in the alphabet.")
 
@@ -44,7 +46,6 @@ def message_de():
     message = input("\nWhat message would you like to decrypt? ").lower().strip()
 
     # Reassign values of numbers
-
     decrypt = {
         '-1':'a',
         '-2':'b',
@@ -76,7 +77,7 @@ def message_de():
 
     # Replace numbers with letters in dictionary
     for key in decrypt:
-        message = message.replace(key, decrypt[key])
+        message = message.replace(key, decrypt[key]) # .replace() method replaces the letter with the number in the message
 
     # Print decrypted message
     print(f"\nYour decrypted message is: {message}")
@@ -125,7 +126,7 @@ def message_en():
 
     # Replace letters with numbers in dictionary
     for key in encrypt:
-        message = message.replace(key, encrypt[key])
+        message = message.replace(key, encrypt[key]) # .replace() method replaces the letter with the number in the message
 
     # Print encrypted message
     print(f"\nYour encrypted message is: {message}")
@@ -141,6 +142,7 @@ def main():
     # Run start function
     start()
 
+    # Loop until user wants to exit or user closes the program
     while True:
 
         # Print options
@@ -169,5 +171,6 @@ def main():
             print("Invalid input.")
 
 
+# Run main function
 if __name__ == "__main__":
     main()
